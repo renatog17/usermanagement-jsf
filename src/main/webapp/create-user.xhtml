@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet name="primefaces/primefaces.css" />
+        <h:outputStylesheet name="aristo.css" />
+        <h:outputScript name="primefaces.js" />
+        <title>Criar Novo Usuário</title>
+    </h:head>
+    <body>
+        <h:form id="createUserForm">
+            <h3>Criar Novo Usuário</h3>
+            
+            <h:panelGrid columns="2" cellpadding="5">
+                <h:outputLabel for="nome" value="Nome:" />
+                <h:inputText id="nome" value="#{userBean.nome}" required="true" label="Nome" />
+
+                <h:outputLabel for="email" value="E-mail:" />
+                <h:inputText id="email" value="#{userBean.email}" required="true" label="E-mail" />
+
+                <h:outputLabel for="senha" value="Senha:" />
+                <h:inputSecret id="senha" value="#{userBean.senha}" required="true" label="Senha" />
+
+                <h:commandButton value="Criar Usuário" action="#{userBean.criarUsuario}" />
+            </h:panelGrid>
+        </h:form>
+    </body>
+</html>

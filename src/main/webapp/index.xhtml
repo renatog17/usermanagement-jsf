@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+     <h:outputStylesheet name="primefaces/primefaces.css" />
+        <h:outputStylesheet name="aristo.css" />
+        <h:outputScript name="primefaces.js" />
+        <title>Lista de Usuários</title>
+    </h:head>
+    <body>
+        <h:form>
+            <p:dataTable value="#{helloBean.users}" var="user">
+                <p:column headerText="ID">
+                    #{user.id}
+                </p:column>
+                <p:column headerText="Nome">
+                    #{user.nome}
+                </p:column>
+                <p:column headerText="E-mail">
+                    #{user.email}
+                </p:column>
+                <p:column headerText="Data de Cadastro">
+                    #{user.dataCadastro}
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </body>
+</html>
