@@ -5,11 +5,13 @@
     <h:head>
      <h:outputStylesheet name="primefaces/primefaces.css" />
         <h:outputStylesheet name="aristo.css" />
-        <h:outputScript name="primefaces.js" />
         <title>Lista de Usuários</title>
     </h:head>
     <body>
         <h:form>
+        	 <h:link value="Cadastrar novo usuário" outcome="create-user"
+                styleClass="ui-link ui-widget ui-state-default ui-corner-all ui-button ui-button-text-only" />
+        	
             <p:dataTable value="#{helloBean.users}" var="user">
                 <p:column headerText="ID">
                     #{user.id}

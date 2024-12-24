@@ -10,20 +10,33 @@
     </h:head>
     <body>
         <h:form id="createUserForm">
-            <h3>Criar Novo Usuário</h3>
+            <h3 class="ui-widget-header" style="text-align:center; padding:10px;">Criar Novo Usuário</h3>
             
-            <h:panelGrid columns="2" cellpadding="5">
-                <h:outputLabel for="nome" value="Nome:" />
-                <h:inputText id="nome" value="#{userBean.nome}" required="true" label="Nome" />
+            <p:panel header="Formulário de Cadastro" styleClass="ui-panel ui-widget ui-widget-content ui-corner-all" 
+                     headerClass="ui-panel-title" style="width: 50%; margin: 0 auto;">
+                
+                <h:panelGrid columns="2" cellpadding="10">
+                    <h:outputLabel for="nome" value="Nome:" />
+                    <h:inputText id="nome" value="#{userBean.nome}" required="true" label="Nome" 
+                                 styleClass="ui-inputtext ui-corner-all" />
 
-                <h:outputLabel for="email" value="E-mail:" />
-                <h:inputText id="email" value="#{userBean.email}" required="true" label="E-mail" />
+                    <h:outputLabel for="email" value="E-mail:" />
+                    <h:inputText id="email" value="#{userBean.email}" required="true" label="E-mail" 
+                                 styleClass="ui-inputtext ui-corner-all" />
 
-                <h:outputLabel for="senha" value="Senha:" />
-                <h:inputSecret id="senha" value="#{userBean.senha}" required="true" label="Senha" />
+                    <h:outputLabel for="senha" value="Senha:" />
+                    <h:inputSecret id="senha" value="#{userBean.senha}" required="true" label="Senha" 
+                                   styleClass="ui-inputtext ui-corner-all" />
 
-                <h:commandButton value="Criar Usuário" action="#{userBean.criarUsuario}" />
-            </h:panelGrid>
+                    <h:commandButton value="Criar Usuário" action="#{userBean.criarUsuario}" 
+                                     styleClass="ui-button ui-widget ui-corner-all ui-button-primary" />
+                </h:panelGrid>
+            </p:panel>
         </h:form>
+
+        <!-- Link para a página index.xhtml -->
+        <h:link value="Voltar para a Página Inicial" outcome="index" 
+                styleClass="ui-link ui-widget ui-state-default ui-corner-all ui-button ui-button-text-only" />
+
     </body>
 </html>
