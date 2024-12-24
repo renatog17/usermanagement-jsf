@@ -5,6 +5,9 @@ Uma aplicação desenvolvida com **JSF** e **PrimeFaces** que consome a API de G
 ## Sobre o Projeto  
 Este front-end foi desenvolvido como parte de um desafio técnico da GTI e utiliza a API de Gerenciamento de Usuários como back-end.  
 
+Você pode acessar o repositório da API [aqui](https://github.com/renatog17/usermanagement).  
+
+
 ## Funcionalidades  
 - Interface para cadastrar usuários  
 - Visualização da lista de usuários cadastrados  
